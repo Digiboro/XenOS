@@ -10,6 +10,8 @@
      NT-compatible Operating System
 ```
 
+Experimental, non-commercial research project. The project is currently in deep development.
+
 ## Quick Start
 
 ```bash
