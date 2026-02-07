@@ -1,0 +1,7 @@
+# PCI Bus Driver
+# Перечисление и управление PCI устройствами
+
+[package]
+name = "pci"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\pci.dll"

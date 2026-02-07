@@ -1,0 +1,63 @@
+# Imports for hello_world_crt.exe
+# Generated: Wed Dec 17 08:49:40 MSK 2025
+
+ vma:            Hint    Time      Forward  DLL       First
+	DLL Name: KERNEL32.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00008258  <none>  0127  DeleteCriticalSection
+	00008260  <none>  014d  EnterCriticalSection
+	00008268  <none>  0288  GetLastError
+	00008270  <none>  0396  InitializeCriticalSection
+	00008278  <none>  03f4  LeaveCriticalSection
+	00008280  <none>  0599  SetUnhandledExceptionFilter
+	00008288  <none>  05a9  Sleep
+	00008290  <none>  05cd  TlsGetValue
+	00008298  <none>  05fd  VirtualProtect
+	000082a0  <none>  05ff  VirtualQuery
+	DLL Name: api-ms-win-crt-environment-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000082b0  <none>  0000  __p__environ
+	DLL Name: api-ms-win-crt-heap-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000082c0  <none>  0017  _set_new_mode
+	000082c8  <none>  0018  calloc
+	000082d0  <none>  0019  free
+	000082d8  <none>  001a  malloc
+	DLL Name: api-ms-win-crt-locale-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000082e8  <none>  0008  _configthreadlocale
+	DLL Name: api-ms-win-crt-math-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000082f8  <none>  0009  __setusermatherr
+	DLL Name: api-ms-win-crt-private-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00008308  <none>  000c  __C_specific_handler
+	00008310  <none>  043e  memcpy
+	DLL Name: api-ms-win-crt-runtime-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00008320  <none>  0004  __p___argc
+	00008328  <none>  0005  __p___argv
+	00008330  <none>  0016  _cexit
+	00008338  <none>  0018  _configure_narrow_argv
+	00008340  <none>  001e  _crt_atexit
+	00008348  <none>  0023  _exit
+	00008350  <none>  0034  _initialize_narrow_environment
+	00008358  <none>  0037  _initterm
+	00008360  <none>  0038  _initterm_e
+	00008368  <none>  0043  _set_app_type
+	00008370  <none>  0049  _set_invalid_parameter_handler
+	00008378  <none>  0056  abort
+	00008380  <none>  0057  exit
+	00008388  <none>  0065  signal
+	DLL Name: api-ms-win-crt-stdio-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00008398  <none>  0000  __acrt_iob_func
+	000083a0  <none>  0001  __p__commode
+	000083a8  <none>  0002  __p__fmode
+	000083b0  <none>  0003  __stdio_common_vfprintf
+	000083b8  <none>  00b4  putchar
+	000083c0  <none>  00b5  puts
+	DLL Name: api-ms-win-crt-string-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000083d0  <none>  00a7  strlen
+	000083d8  <none>  00aa  strncmp

@@ -1,0 +1,17 @@
+[package]
+name = "msahci"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Microsoft AHCI Storage Miniport Driver"
+keywords = ["windows", "nt", "kernel", "xenos", "ahci", "storage"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = []
+storage-trace = []
+
+[dependencies]
+

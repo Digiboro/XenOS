@@ -1,0 +1,20 @@
+[package]
+name = "hive"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Library for working with Windows Registry Hive files (REGF format)"
+keywords = ["windows", "nt", "registry", "hive", "regf"]
+
+[dependencies]
+bitflags = "2.8"
+zerocopy = { version = "0.8", default-features = false, features = ["derive"] }
+
+[features]
+default = []
+# Enables std library support (for tests)
+std = ["alloc"]
+# Enables alloc support (Vec, String, etc.)
+alloc = []
+# Enables full write support (creating keys, values, hive files)
+write = ["alloc"]

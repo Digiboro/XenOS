@@ -1,0 +1,23 @@
+[package]
+name = "uefi-raw"
+version = "0.13.0"
+readme = "README.md"
+description = """
+Raw UEFI types and bindings for protocols, boot, and runtime services. This can
+serve as base for an UEFI firmware implementation or a high-level wrapper to
+access UEFI functionality from an UEFI image.
+"""
+authors = ["The Rust OSDev team", "XenOS Team"]
+categories = ["embedded", "no-std", "api-bindings"]
+edition = "2024"
+keywords = ["uefi", "efi"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/AiselK/XenOS"
+rust-version = "1.85.1"
+
+[dependencies]
+bitflags = "2.0.0"
+uguid = "2.2.1"
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]

@@ -1,0 +1,10 @@
+# Storport Driver
+# Порт-драйвер для storage miniport драйверов
+
+[package]
+name = "storport"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\storport.dll"
+
+[build]
+conditional_features = { "TRACE_STORAGE" = "storage-trace" }

@@ -1,0 +1,41 @@
+================================================================================
+test-driver-c - C Boot Driver for XenOS
+================================================================================
+
+Требования:
+-----------
+- Windows 7+ (64-bit)
+- WDK 7600.16385.1 (Windows Driver Kit для Windows 7)
+
+Сборка:
+-------
+1. Установить WDK 7600.16385.1 в C:\WinDDK\7600.16385.1
+   (или установить переменную WDK_ROOT)
+
+2. Запустить build.cmd:
+   > cd boot\drivers\test-driver-c
+   > build.cmd
+
+3. Результат: build\test_driver_c.sys
+
+Использование:
+--------------
+После сборки скопировать test_driver_c.sys в:
+  sysroot/XenOS/system32/drivers/test_driver_c.dll
+
+Или просто запустить cargo xtask run - он автоматически скопирует
+драйвер если build/test_driver_c.sys существует.
+
+Структура:
+----------
+  src/driver.c  - исходный код драйвера
+  build.cmd     - скрипт сборки для Windows
+  BUILD.txt     - этот файл
+
+Примечания:
+-----------
+- Драйвер использует стандартные WDK 7600.16385.1 хедеры (ntddk.h)
+- Создаёт устройство \Device\XenTestC
+- Поддерживает IRP_MJ_CREATE, CLOSE, CLEANUP, READ, WRITE
+- Buffered I/O с внутренним буфером 256 байт
+

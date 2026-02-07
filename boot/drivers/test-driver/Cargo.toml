@@ -1,0 +1,14 @@
+[package]
+name = "test-driver"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Minimal test boot driver for checking boot driver loading mechanism in XenOS"
+keywords = ["windows", "nt", "kernel", "xenos", "test", "boot-driver"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[build-dependencies]

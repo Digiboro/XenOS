@@ -1,0 +1,38 @@
+// Version information resource для test.dll
+// Компилируется: llvm-rc version.rc /fo version.res
+
+// Константы из winver.h (чтобы не зависеть от Windows SDK)
+#define VS_VERSION_INFO     1
+#define VS_FFI_FILEFLAGSMASK 0x3FL
+#define VOS_NT_WINDOWS32    0x00040004L
+#define VFT_DLL             0x00000002L
+#define VFT2_UNKNOWN        0x00000000L
+
+1 VERSIONINFO
+FILEVERSION     0, 1, 0, 0
+PRODUCTVERSION  0, 1, 0, 0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_DLL
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "XenOS Project\0"
+            VALUE "FileDescription",  "Test Boot Driver DLL\0"
+            VALUE "FileVersion",      "0.1.0.0\0"
+            VALUE "InternalName",     "test.dll\0"
+            VALUE "LegalCopyright",   "XenOS Project. MIT License.\0"
+            VALUE "OriginalFilename", "test.dll\0"
+            VALUE "ProductName",      "XenOS Operating System\0"
+            VALUE "ProductVersion",   "0.1.0.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0x04B0
+    END
+END

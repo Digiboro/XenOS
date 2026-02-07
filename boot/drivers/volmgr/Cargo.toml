@@ -1,0 +1,17 @@
+[package]
+name = "volmgr"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Volume Manager - basic disk volume management"
+keywords = ["windows", "nt", "kernel", "xenos", "volume"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = []
+storage-trace = []
+
+[dependencies]
+

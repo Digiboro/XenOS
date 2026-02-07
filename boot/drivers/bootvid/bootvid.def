@@ -1,0 +1,37 @@
+; =============================================================================
+; bootvid.dll - Boot Video Display Driver Exports
+; =============================================================================
+;
+; Этот файл определяет публичный API драйвера bootvid для PE-импорта.
+; Используется для генерации import library (bootvid.lib) через llvm-dlltool.
+;
+; =============================================================================
+
+LIBRARY bootvid.dll
+
+EXPORTS
+    ; Инициализация и завершение
+    VidInitialize
+    VidCleanup
+
+    ; Вывод текста
+    VidDisplayString
+    VidDisplayStringXY
+    VidSetTextColor
+    VidSetScrollRegion
+
+    ; Работа с экраном
+    VidResetDisplay
+    VidSolidColorFill
+
+    ; BitBlt операции
+    VidBitBlt
+    VidBufferToScreenBlt
+    VidScreenToBufferBlt
+
+    ; XenOS extensions (BGRA цвета)
+    VidSolidColorFillBgra
+    VidSetTextBackgroundBgra
+    VidGetFramebufferWidth
+    VidGetFramebufferHeight
+

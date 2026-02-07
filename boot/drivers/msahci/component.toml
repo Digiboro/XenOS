@@ -1,0 +1,10 @@
+# AHCI Miniport Driver
+# Miniport драйвер для AHCI контроллеров
+
+[package]
+name = "msahci"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\msahci.dll"
+
+[build]
+conditional_features = { "TRACE_STORAGE" = "storage-trace" }

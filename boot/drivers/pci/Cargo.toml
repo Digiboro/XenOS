@@ -1,0 +1,15 @@
+[package]
+name = "pci"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "PCI Bus Driver for XenOS - enumerates PCI devices and creates PDOs"
+keywords = ["windows", "nt", "kernel", "xenos", "pci", "bus-driver"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[build-dependencies]
+

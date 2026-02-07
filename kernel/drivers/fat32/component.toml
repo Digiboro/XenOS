@@ -1,0 +1,7 @@
+# FAT32 File System Driver
+# Драйвер файловой системы FAT32
+
+[package]
+name = "fat32"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\fat32.dll"

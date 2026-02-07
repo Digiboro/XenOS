@@ -1,0 +1,8 @@
+[workspace]
+members = [
+  "mkhive",
+  "nslgen",
+]
+resolver = "2"
+# xtask исключён - он использует отдельную систему зависимостей
+exclude = ["xtask"]

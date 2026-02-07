@@ -1,0 +1,92 @@
+# XenOS Build Configuration
+# Формат: Kconfig-style в TOML
+
+[metadata]
+version = 1
+description = "XenOS kernel and system configuration"
+
+# ============================================================================
+# KERNEL CONFIGURATION
+# ============================================================================
+
+[[menu]]
+id = "kernel"
+prompt = "Kernel Configuration"
+configs = [
+    { id = "KERNEL_ALLOC", type = "bool", prompt = "Enable kernel allocator (alloc)", default = true, help = "Cargo feature: alloc. Enable dynamic memory allocation in kernel." },
+    { id = "KERNEL_AML", type = "bool", prompt = "ACPI AML interpreter (aml)", default = true, depends = "KERNEL_ALLOC", help = "Cargo feature: aml. Enable ACPI Machine Language interpreter." },
+]
+
+# ============================================================================
+# DEBUGGING
+# ============================================================================
+
+[[menu]]
+id = "debug"
+prompt = "Debugging Options"
+configs = [
+    { id = "DEBUG_KD_FORCE", type = "bool", prompt = "Force kernel debugger present (kd-force-present)", default = false, help = "Cargo feature: kd-force-present. Treat KD as always connected even without /DEBUG." },
+]
+
+# ============================================================================
+# TRACING
+# ============================================================================
+
+[[menu]]
+id = "trace"
+prompt = "Kernel Tracing (debugcon port 0xE9)"
+configs = [
+    { id = "TRACE_ENABLE", type = "bool", prompt = "Enable tracing subsystem (trace)", default = false, help = "Binary tracing via QEMU debugcon port 0xE9." },
+    { id = "TRACE_CALLS", type = "bool", prompt = "Function call tracing (trace-calls)", default = false, help = "Trace function entry/exit." },
+    { id = "TRACE_SCHED", type = "bool", prompt = "Scheduler tracing (trace-sched)", default = false, help = "Cargo feature: trace-sched" },
+    { id = "TRACE_PS", type = "bool", prompt = "Process/thread tracing (trace-ps)", default = false, help = "Cargo feature: trace-ps" },
+    { id = "TRACE_MM", type = "bool", prompt = "Memory manager tracing (trace-mm)", default = false, help = "Cargo feature: trace-mm" },
+    { id = "TRACE_OB", type = "bool", prompt = "Object manager tracing (trace-ob)", default = false, help = "Cargo feature: trace-ob" },
+    { id = "TRACE_IO", type = "bool", prompt = "I/O manager tracing (trace-io)", default = false, help = "Cargo feature: trace-io" },
+    { id = "TRACE_STORAGE", type = "bool", prompt = "Storage stack tracing (storage-trace)", default = false, help = "Enable debug output for StorPort, MSAHCI and disk drivers. Cargo feature: storage-trace" },
+]
+
+# ============================================================================
+# TESTING
+# ============================================================================
+
+[[menu]]
+id = "test"
+prompt = "Testing Configuration"
+configs = [
+    { id = "TEST_KERNEL", type = "bool", prompt = "Kernel test mode (test-kernel)", default = false, help = "Enable kernel test framework for QEMU exit codes." },
+    { id = "TEST_PS", type = "bool", prompt = "Process/thread tests (ps-test)", default = false, depends = "TEST_KERNEL", help = "Cargo feature: ps-test" },
+]
+
+# ============================================================================
+# QEMU CONFIGURATION
+# ============================================================================
+
+[[menu]]
+id = "qemu"
+prompt = "QEMU Configuration"
+configs = [
+    { id = "QEMU_MACHINE", type = "choice", prompt = "Machine type", default = "q35", help = "QEMU machine type (-M)", choices = ["q35", "pc"] },
+    { id = "QEMU_CPU", type = "choice", prompt = "CPU model", default = "max", help = "QEMU CPU model (-cpu)", choices = ["max", "base"] },
+    { id = "QEMU_ACCEL", type = "choice", prompt = "Accelerator", default = "none", help = "QEMU acceleration (-accel). 'none' = don't specify", choices = ["none", "tcg"] },
+    { id = "QEMU_MEMORY", type = "string", prompt = "RAM size", default = "1G", help = "RAM for QEMU VM (-m)" },
+    { id = "QEMU_SMP", type = "int", prompt = "Number of CPUs", default = 1, range = [1, 16], help = "Virtual CPUs (-smp)" },
+    { id = "QEMU_VGA", type = "choice", prompt = "VGA type", default = "std", help = "VGA card type (-vga)", choices = ["none", "std", "cirrus", "vmware", "virtio"] },
+    { id = "QEMU_MONITOR", type = "choice", prompt = "Monitor", default = "vc", help = "QEMU monitor (-monitor)", choices = ["vc", "stdio", "none"] },
+    { id = "QEMU_SERIAL", type = "choice", prompt = "Serial output", default = "stdio", help = "Serial port output (-serial)", choices = ["stdio", "file", "none"] },
+    { id = "QEMU_SERIAL_FILE", type = "string", prompt = "Serial output file", default = "serial.txt", visible_if = "QEMU_SERIAL == file" },
+]
+
+# ============================================================================
+# BUILD OPTIONS
+# ============================================================================
+
+[[menu]]
+id = "build"
+prompt = "Build Options"
+configs = [
+    { id = "BUILD_MODE", type = "choice", prompt = "Build Mode", default = "debug", choices = ["debug", "release", "test"] },
+    { id = "BUILD_DRIVERS", type = "bool", prompt = "Build boot drivers", default = true },
+    { id = "BUILD_ISO", type = "bool", prompt = "Generate ISO image", default = false },
+    { id = "BUILD_LIMINE", type = "bool", prompt = "Build Limine bootloader", default = false },
+]

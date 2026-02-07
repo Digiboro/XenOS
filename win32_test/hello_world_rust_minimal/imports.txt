@@ -1,0 +1,118 @@
+# Imports for hello_world.exe
+# Generated: Wed Dec 17 08:49:01 MSK 2025
+
+ vma:            Hint    Time      Forward  DLL       First
+	DLL Name: KERNEL32.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041428  <none>  0014  AddVectoredExceptionHandler
+	00041430  <none>  0097  CloseHandle
+	00041438  <none>  00d8  CreateFileMappingA
+	00041440  <none>  00df  CreateFileW
+	00041448  <none>  0110  CreateToolhelp32Snapshot
+	00041450  <none>  0127  DeleteCriticalSection
+	00041458  <none>  0145  DuplicateHandle
+	00041460  <none>  014d  EnterCriticalSection
+	00041468  <none>  01c6  FormatMessageW
+	00041470  <none>  021c  GetConsoleMode
+	00041478  <none>  0220  GetConsoleOutputCP
+	00041480  <none>  0231  GetCurrentDirectoryW
+	00041488  <none>  0238  GetCurrentProcess
+	00041490  <none>  023c  GetCurrentThread
+	00041498  <none>  023d  GetCurrentThreadId
+	000414a0  <none>  025d  GetEnvironmentVariableW
+	000414a8  <none>  026d  GetFileInformationByHandle
+	000414b0  <none>  026e  GetFileInformationByHandleEx
+	000414b8  <none>  0280  GetFullPathNameW
+	000414c0  <none>  0288  GetLastError
+	000414c8  <none>  029e  GetModuleHandleA
+	000414d0  <none>  02a1  GetModuleHandleW
+	000414d8  <none>  02da  GetProcAddress
+	000414e0  <none>  02e1  GetProcessHeap
+	000414e8  <none>  0300  GetStdHandle
+	000414f0  <none>  0379  HeapAlloc
+	000414f8  <none>  037f  HeapFree
+	00041500  <none>  0383  HeapReAlloc
+	00041508  <none>  038f  InitOnceBeginInitialize
+	00041510  <none>  0390  InitOnceComplete
+	00041518  <none>  0396  InitializeCriticalSection
+	00041520  <none>  03f4  LeaveCriticalSection
+	00041528  <none>  0417  MapViewOfFile
+	00041530  <none>  041c  Module32FirstW
+	00041538  <none>  041e  Module32NextW
+	00041540  <none>  0428  MultiByteToWideChar
+	00041548  <none>  04a0  RaiseException
+	00041550  <none>  04e8  RtlCaptureContext
+	00041558  <none>  04f0  RtlLookupFunctionEntry
+	00041560  <none>  04f6  RtlUnwindEx
+	00041568  <none>  04f7  RtlVirtualUnwind
+	00041570  <none>  055a  SetLastError
+	00041578  <none>  058d  SetThreadStackGuarantee
+	00041580  <none>  0599  SetUnhandledExceptionFilter
+	00041588  <none>  05a9  Sleep
+	00041590  <none>  05cb  TlsAlloc
+	00041598  <none>  05cc  TlsFree
+	000415a0  <none>  05cd  TlsGetValue
+	000415a8  <none>  05cf  TlsSetValue
+	000415b0  <none>  05df  UnmapViewOfFile
+	000415b8  <none>  05fd  VirtualProtect
+	000415c0  <none>  05ff  VirtualQuery
+	000415c8  <none>  0608  WaitForSingleObject
+	000415d0  <none>  0647  WriteConsoleW
+	000415d8  <none>  0659  __C_specific_handler
+	DLL Name: api-ms-win-crt-environment-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000415e8  <none>  0000  __p__environ
+	DLL Name: api-ms-win-crt-heap-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000415f8  <none>  0017  _set_new_mode
+	00041600  <none>  0018  calloc
+	00041608  <none>  0019  free
+	00041610  <none>  001a  malloc
+	DLL Name: api-ms-win-crt-locale-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041620  <none>  0008  _configthreadlocale
+	DLL Name: api-ms-win-crt-math-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041630  <none>  0009  __setusermatherr
+	DLL Name: api-ms-win-crt-private-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041640  <none>  043d  memcmp
+	00041648  <none>  043e  memcpy
+	00041650  <none>  043f  memmove
+	DLL Name: api-ms-win-crt-runtime-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041660  <none>  0004  __p___argc
+	00041668  <none>  0005  __p___argv
+	00041670  <none>  0016  _cexit
+	00041678  <none>  0018  _configure_narrow_argv
+	00041680  <none>  001e  _crt_atexit
+	00041688  <none>  0023  _exit
+	00041690  <none>  0025  _fpreset
+	00041698  <none>  0034  _initialize_narrow_environment
+	000416a0  <none>  0037  _initterm
+	000416a8  <none>  0038  _initterm_e
+	000416b0  <none>  0043  _set_app_type
+	000416b8  <none>  0049  _set_invalid_parameter_handler
+	000416c0  <none>  0056  abort
+	000416c8  <none>  0057  exit
+	000416d0  <none>  0065  signal
+	DLL Name: api-ms-win-crt-stdio-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	000416e0  <none>  0000  __acrt_iob_func
+	000416e8  <none>  0001  __p__commode
+	000416f0  <none>  0002  __p__fmode
+	000416f8  <none>  0003  __stdio_common_vfprintf
+	DLL Name: api-ms-win-crt-string-l1-1-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041708  <none>  009f  memset
+	00041710  <none>  00a7  strlen
+	00041718  <none>  00aa  strncmp
+	DLL Name: ntdll.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041728  <none>  02c3  NtWriteFile
+	00041730  <none>  0541  RtlNtStatusToDosError
+	DLL Name: api-ms-win-core-synch-l1-2-0.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00041740  <none>  0003  WaitOnAddress
+	00041748  <none>  0001  WakeByAddressAll
+	00041750  <none>  0002  WakeByAddressSingle

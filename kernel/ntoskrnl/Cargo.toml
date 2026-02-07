@@ -1,0 +1,44 @@
+[package]
+name = "ntoskrnl"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "XenOS core kernel providing a Windows NT-like kernel architecture"
+keywords = ["windows", "nt", "kernel", "xenos", "ntoskrnl"]
+
+[lib]
+crate-type = ["rlib"]
+
+[dependencies]
+# NT Loader shared structures
+ntldr = { path = "../../libs/ntldr" }
+
+# PE format parsing
+pe = { path = "../../libs/pe" }
+
+# PCI types for parsing device/vendor IDs, BARs, etc.
+pci_types = { path = "../../vendor/pci_types" }
+
+# Synchronization primitives for lock-free spinlocks
+spinning_top = { path = "../../vendor/spinning_top" }
+
+# TODO: Must be replaced
+bit_field = "0.10.2"
+bitflags = "2.5.0"
+byteorder = { version = "1.5.0", default-features = false }
+log = "0.4.20"
+
+[build-dependencies]
+cc = "1.0"
+
+[features]
+default = ["alloc", "aml"]
+alloc = []
+aml = ["alloc"]
+test-kernel = []  # Режим тестирования ядра в QEMU
+kd-force-present = [] # DEV: считать KD подключенным (DbgPrint будет идти в serial)
+ps-test = [] # Запустить тестовые потоки
+trace-ob = [] # DEV: трассировка Object Manager
+trace-io = [] # DEV: трассировка I/O Manager (device, file, interface)
+trace-mm = [] # DEV: трассировка Memory Manager (MDL, page walk)
+storage-trace = [] # DEV: трассировка storage stack (для драйверов storport, disk, partmgr)

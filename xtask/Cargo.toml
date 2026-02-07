@@ -1,0 +1,41 @@
+[package]
+name = "xtask"
+version = "0.0.0"
+edition = "2024"
+publish = false
+description = "XenOS build system and task runner"
+
+[dependencies]
+# CLI
+clap = { version = "4.4", features = ["derive", "env"] }
+
+# Async runtime
+tokio = { version = "1", features = ["process", "fs", "io-util", "rt-multi-thread", "macros"] }
+
+# File operations
+fs-err = "3.0"
+walkdir = "2.4"
+tempfile = "3.6"
+
+# Disk images
+fatfs = { version = "0.3", default-features = false, features = ["alloc", "std"] }
+gpt = "4.1.0"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.9.10+spec-1.1.0"
+
+# TUI for menuconfig
+ratatui = "0.29"
+crossterm = "0.29.0"
+
+# Utilities
+anyhow = "1.0"
+thiserror = "2.0"
+log = "0.4"
+env_logger = "0.11"
+which = "8.0.0"
+
+# Internal libraries (for artifact generation)
+hive = { path = "../libs/hive", features = ["write", "std"] }
+

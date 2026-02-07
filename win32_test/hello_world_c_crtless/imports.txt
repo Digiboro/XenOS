@@ -1,0 +1,9 @@
+# Imports for hello_world_crtless.exe
+# Generated: Wed Dec 17 08:50:20 MSK 2025
+
+ vma:            Hint    Time      Forward  DLL       First
+	DLL Name: KERNEL32.dll
+	vma:     Ordinal  Hint  Member-Name  Bound-To
+	00005048  <none>  017c  ExitProcess
+	00005050  <none>  0300  GetStdHandle
+	00005058  <none>  0648  WriteFile

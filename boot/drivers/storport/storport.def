@@ -1,0 +1,23 @@
+; storport.def - Export definitions for StorPort API
+
+LIBRARY storport.dll
+
+EXPORTS
+    StorPortInitialize
+    StorPortNotification
+    StorPortGetUncachedExtension
+    StorPortGetDeviceBase
+    StorPortFreeDeviceBase
+    StorPortReadRegisterUlong
+    StorPortWriteRegisterUlong
+    StorPortReadRegisterUshort
+    StorPortWriteRegisterUshort
+    StorPortReadRegisterUchar
+    StorPortWriteRegisterUchar
+    StorPortStallExecution
+    StorPortGetPhysicalAddress
+    StorPortGetVirtualAddress
+    StorPortLogError
+    StorPortGetScatterGatherList
+    StorPortPutScatterGatherList
+

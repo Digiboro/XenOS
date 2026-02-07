@@ -1,0 +1,7 @@
+# Mount Manager Driver
+# Управление точками монтирования
+
+[package]
+name = "mountmgr"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\mountmgr.dll"

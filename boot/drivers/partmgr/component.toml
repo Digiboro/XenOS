@@ -1,0 +1,10 @@
+# Partition Manager Driver
+# Управление разделами дисков
+
+[package]
+name = "partmgr"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\partmgr.dll"
+
+[build]
+conditional_features = { "TRACE_STORAGE" = "storage-trace" }

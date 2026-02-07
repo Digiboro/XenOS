@@ -1,0 +1,8 @@
+[package]
+name = "nslgen"
+version = "0.1.0"
+edition = "2024"
+
+# Host tool (std). Not part of XenCore workspace on purpose.
+
+[dependencies]

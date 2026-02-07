@@ -1,0 +1,10 @@
+[package]
+name = "mkhive"
+version = "0.1.0"
+edition = "2024"
+
+# Host tool (std). Not part of XenCore workspace on purpose.
+
+[dependencies]
+# Используем библиотеку hive из libs/hive с поддержкой записи и std
+hive = { path = "../../libs/hive", features = ["write", "std"] }

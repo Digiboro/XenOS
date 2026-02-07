@@ -1,0 +1,51 @@
+# XenCore Rustfmt Configuration
+# Based on Linux Kernel Rust Coding Guidelines recommendations
+
+# Standard line width
+max_width = 100
+
+# Use edition from Cargo.toml
+edition = "2024"
+
+# Vertical import style (like in Linux Kernel)
+# Each item on a separate line to simplify merge/rebase
+imports_granularity = "Item"
+group_imports = "StdExternalCrate"
+
+# Comment formatting
+normalize_comments = false
+wrap_comments = false
+
+# Indentation (Rust standard — 4 spaces)
+tab_spaces = 4
+hard_tabs = false
+
+# Trailing comma in multiline constructs
+trailing_comma = "Vertical"
+
+# Match formatting
+match_block_trailing_comma = true
+
+# Function formatting
+fn_single_line = false
+fn_params_layout = "Tall"
+
+# Struct formatting
+struct_lit_single_line = true
+
+# Line breaks in method chains
+chain_width = 60
+
+# Use statements formatting
+reorder_imports = true
+reorder_modules = true
+
+# Attribute formatting
+blank_lines_upper_bound = 2
+
+# Don't format generated code
+ignore = [
+    "vendor/",
+    "target/",
+]
+

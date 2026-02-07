@@ -1,0 +1,17 @@
+[package]
+name = "mountmgr"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Mount Manager - drive letter and mount point management"
+keywords = ["windows", "nt", "kernel", "xenos", "mount"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = []
+storage-trace = []
+
+[dependencies]
+

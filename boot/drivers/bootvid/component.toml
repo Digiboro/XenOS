@@ -1,0 +1,7 @@
+# Boot Video Driver
+# Отвечает за вывод на экран во время загрузки
+
+[package]
+name = "bootvid"
+type = "driver"
+destination = "%SystemRoot%\\system32\\bootvid.dll"

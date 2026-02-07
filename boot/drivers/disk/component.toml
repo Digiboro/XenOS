@@ -1,0 +1,10 @@
+# Disk Class Driver
+# Классовый драйвер для дисковых устройств
+
+[package]
+name = "disk"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\disk.dll"
+
+[build]
+conditional_features = { "TRACE_STORAGE" = "storage-trace" }

@@ -1,0 +1,15 @@
+[package]
+name = "bootvid"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Boot Video Driver for XenOS"
+keywords = ["windows", "nt", "kernel", "xenos", "bootvid"]
+
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[build-dependencies]

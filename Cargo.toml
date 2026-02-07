@@ -1,0 +1,46 @@
+[workspace]
+members = [
+    # Ядро
+    "kernel/ntoskrnl",
+    
+    # Kernel драйверы
+    "kernel/drivers/fat32",
+
+    # Boot компоненты
+    "boot/winload",
+    "boot/drivers/bootvid",
+    "boot/drivers/pci",
+    "boot/drivers/storport",
+    "boot/drivers/msahci",
+    "boot/drivers/disk",
+    "boot/drivers/partmgr",
+    "boot/drivers/volmgr",
+    "boot/drivers/mountmgr",
+    "boot/drivers/test-driver",
+
+    # Библиотеки
+    "libs/ntldr",
+    "libs/hive",
+    "libs/uefi",
+    "libs/uefi-macros",
+    "libs/uefi-raw",
+
+    # Build system
+    "xtask",
+]
+resolver = "2"
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+lto = true
+debug = false
+
+# Используем локальный форк uefi-rs
+[patch.crates-io]
+uefi = { path = "libs/uefi" }
+uefi-macros = { path = "libs/uefi-macros" }
+uefi-raw = { path = "libs/uefi-raw" }

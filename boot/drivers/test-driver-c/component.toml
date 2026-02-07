@@ -1,0 +1,7 @@
+# Test C Driver
+# Тестовый драйвер на C
+
+[package]
+name = "test-driver-c"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\test_driver_c.dll"

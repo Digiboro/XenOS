@@ -1,0 +1,21 @@
+[package]
+name = "disk"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Storage Class Driver for XenOS - provides block device access"
+keywords = ["windows", "nt", "kernel", "xenos", "disk", "storage"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = []
+storage-trace = []
+
+[dependencies]
+bitflags = "2.5.0"
+log = "0.4.20"
+
+[build-dependencies]
+

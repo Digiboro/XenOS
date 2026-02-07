@@ -1,0 +1,16 @@
+[package]
+name = "partmgr"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Partition Manager - filter driver for disk partitioning"
+keywords = ["windows", "nt", "kernel", "xenos", "partition"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+storage-trace = []
+
+[dependencies]
+

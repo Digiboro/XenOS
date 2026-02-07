@@ -1,0 +1,12 @@
+[package]
+name = "ntldr"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Loader shared structures (winload <-> ntoskrnl)"
+keywords = ["windows", "nt", "loader", "boot"]
+
+[lib]
+crate-type = ["rlib"]
+
+[dependencies]

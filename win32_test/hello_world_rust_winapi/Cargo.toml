@@ -1,0 +1,14 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+edition = "2021"
+description = "XenOS Win32 Test Application - Hello World (Rust)"
+
+[workspace]
+
+[dependencies]
+windows = { version = "0.59", features = ["Win32_System_SystemInformation"] }
+
+[profile.release]
+opt-level = "s"
+lto = true

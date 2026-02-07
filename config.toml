@@ -1,0 +1,3 @@
+TRACE_MM = true
+TRACE_IO = true
+TRACE_STORAGE = true

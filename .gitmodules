@@ -1,0 +1,9 @@
+[submodule "vendor/limine"]
+	path = vendor/limine
+	url = https://github.com/limine-bootloader/limine.git
+[submodule "vendor/pci_types"]
+	path = vendor/pci_types
+	url = https://github.com/rust-osdev/pci_types.git
+[submodule "vendor/spinning_top"]
+	path = vendor/spinning_top
+	url = https://github.com/rust-osdev/spinning_top.git

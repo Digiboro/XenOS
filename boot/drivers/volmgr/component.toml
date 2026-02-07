@@ -1,0 +1,10 @@
+# Volume Manager Driver
+# Управление томами
+
+[package]
+name = "volmgr"
+type = "driver"
+destination = "%SystemRoot%\\system32\\drivers\\volmgr.dll"
+
+[build]
+conditional_features = { "TRACE_STORAGE" = "storage-trace" }

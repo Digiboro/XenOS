@@ -1,0 +1,15 @@
+[package]
+name = "pe"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Library for parsing PE32/PE32+ (Portable Executable) format"
+keywords = ["windows", "nt", "pe", "portable-executable", "parser"]
+
+[dependencies]
+
+[features]
+default = []
+# Enables alloc support (Vec for sections, data directories)
+alloc = []
+

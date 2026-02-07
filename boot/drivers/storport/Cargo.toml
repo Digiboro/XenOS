@@ -1,0 +1,17 @@
+[package]
+name = "storport"
+version = "0.1.0"
+edition = "2024"
+authors = ["XenOS Team"]
+description = "Storage Port Driver - provides miniport interface for SCSI/SATA storage devices"
+keywords = ["windows", "nt", "kernel", "xenos", "storage", "scsi"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = []
+storage-trace = []
+
+[dependencies]
+
